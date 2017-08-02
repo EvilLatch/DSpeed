@@ -1,0 +1,219 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="35dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.lachlanbland.dspeed.MainActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/strokeRateText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/section_label"
+                android:layout_toEndOf="@+id/section_label"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Stroke Rate"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/speedText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/section_label"
+                android:layout_toEndOf="@+id/section_label"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Speed"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/strokeRate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/section_label"
+                android:layout_toEndOf="@+id/section_label"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="13"
+                android:textColor="@color/colorPrimary"
+                android:textSize="85sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/speed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/section_label"
+                android:layout_toEndOf="@+id/section_label"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Nil"
+                android:textSize="85sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Chronometer
+                    android:id="@+id/chronometer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center"
+                    android:textSize="51sp" />
+                <Chronometer
+                    android:id="@+id/chronometerRest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center"
+                    android:textSize="21sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:orientation="vertical">
+                <TextClock
+                    android:id="@+id/textClock"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textSize="50sp"
+                    android:gravity="center_vertical|center" />
+                <TextView
+                    android:id="@+id/hitCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/section_label"
+                    android:layout_toEndOf="@+id/section_label"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Nil"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/section_label"
+                    android:layout_toEndOf="@+id/section_label"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Nil"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="0">
+            <TextView
+                android:id="@+id/strokeRateZeroCross"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/section_label"
+                android:layout_toEndOf="@+id/section_label"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="13"
+                android:textColor="@color/colorPrimary"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/strokeRate"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/speedGraph"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/moveLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Left" />
+
+                <Button
+                    android:id="@+id/moveRight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Right" />
+
+                <Button
+                    android:id="@+id/zoomIn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="ZoomIn" />
+
+                <Button
+                    android:id="@+id/zoomOut"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="ZoomOut" />
+            </LinearLayout>
+
+            <!--           <com.jjoe64.graphview.GraphView
+                           android:id="@+id/graph"
+                           android:layout_width="match_parent"
+                           android:layout_height="0dp"
+                           android:layout_weight="2" />
+                           -->
+               </LinearLayout>
+
+           </LinearLayout>
+
+
+
+</RelativeLayout>
